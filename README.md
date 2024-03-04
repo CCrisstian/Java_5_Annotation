@@ -59,3 +59,18 @@ public @interface MiAnotacion {
 }
 ```
 En este ejemplo, la anotación @MiAnotacion se retiene durante la ejecución, lo que permite acceder a la información asociada con la anotación en tiempo de ejecución mediante reflexión.
+<h2 align="center">@Documented</h2>
+<p>La anotación <b>'@Documented'</b> en Java es una anotación de marcador que se utiliza para indicar que las anotaciones personalizadas con esta anotación deben ser incluidas en la documentación generada automáticamente. Es decir, cuando se genera la documentación del código utilizando herramientas como Javadoc, las anotaciones marcadas con <b>'@Documented'</b> se incluirán en la documentación para que los desarrolladores puedan consultarlas.</p>
+
+Esta anotación no tiene parámetros y se utiliza de la siguiente manera:
+```java
+import java.lang.annotation.Documented;
+
+@Documented
+public @interface MiAnotacion {
+    // Definición de la anotación
+}
+
+```
+<p>En este ejemplo, la anotación @MiAnotacion está marcada con <b>'@Documented'</b>, lo que significa que cualquier uso de esta anotación en el código fuente será documentado en la salida de Javadoc.</p>
+<p>Es importante destacar que <b>'@Documented'</b> no cambia el comportamiento o la funcionalidad de la anotación en sí; simplemente afecta a la generación de documentación. Si una anotación personalizada no está marcada con <b>'@Documented'</b>, su presencia y detalles pueden no aparecer en la documentación generada.</p>
