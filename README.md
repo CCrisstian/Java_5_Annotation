@@ -74,3 +74,32 @@ public @interface MiAnotacion {
 ```
 <p>En este ejemplo, la anotación @MiAnotacion está marcada con <b>'@Documented'</b>, lo que significa que cualquier uso de esta anotación en el código fuente será documentado en la salida de Javadoc.</p>
 <p>Es importante destacar que <b>'@Documented'</b> no cambia el comportamiento o la funcionalidad de la anotación en sí; simplemente afecta a la generación de documentación. Si una anotación personalizada no está marcada con <b>'@Documented'</b>, su presencia y detalles pueden no aparecer en la documentación generada.</p>
+<h2 align="center">'Field'</h2>
+<p>En Java, <b>'Field'</b> es una clase que pertenece al paquete <b>java.lang.reflect</b> y se utiliza para representar campos (variables de instancia) de una clase. Esta clase proporciona métodos para obtener y manipular información sobre los campos de una clase en tiempo de ejecución.</p>
+
+Métodos proporcionados por la clase `Field`:
+-  `get()`: Devuelve el valor del campo para el objeto dado. Necesita recibir como argumento una instancia del objeto al que pertenece el campo.
+-  `set()`: Asigna un nuevo valor al campo para el objeto dado. Requiere dos argumentos: una instancia del objeto al que pertenece el campo y el nuevo valor a asignar.
+-  `getName()`: Devuelve el nombre del campo como una cadena de texto.
+-  `getType()`: Devuelve un objeto `Class` que representa el tipo de datos del campo.
+-  `getModifiers()`: Devuelve un entero que representa los modificadores del campo. Puede utilizarse junto con la clase `Modifier` para analizar los modificadores.
+-  `equals(Object obj)`: Compara el campo con otro objeto para verificar si son iguales.
+-  `hashCode()`: Devuelve el código hash del campo.
+-  `toString()`: Devuelve una representación en cadena del campo, que incluye su nombre y tipo.
+-  `getClass()`: Devuelve la clase Class que representa la clase en la que se declara el campo.
+-  `getClass().getDeclaredFields()`: Devuelve un array de objetos `Field` que representan todos los campos declarados en la clase, incluidos los campos privados.
+-  `getClass().getFields()`: Devuelve un array de objetos Field que representan todos los campos públicos de la clase y de sus superclases.
+-  `getClass().getAnnotationsByType(Class<T> annotationClass)`: Devuelve un array de anotaciones del tipo especificado que están presentes en el campo.
+-  `getClass().getDeclaredAnnotationsByType(Class<T> annotationClass)`: Similar a `getAnnotationsByType`, pero solo busca en las anotaciones declaradas directamente en la clase, sin considerar las heredadas.
+-  `set(Object obj, Object value)`: Asigna un nuevo valor al campo para el objeto dado. Puede ser utilizado para modificar el valor de un campo, incluso si es privado.
+-  `setAccessible(boolean flag)`: Establece la accesibilidad del campo. Si `flag` es `true`, el campo se vuelve accesible incluso si es privado, lo cual puede ser útil para evitar restricciones de acceso. Puede lanzar una excepción `SecurityException` si la seguridad no lo permite.
+-  `setBoolean(Object obj, boolean z)`: Asigna un valor booleano al campo para el objeto dado.
+-  `setByte(Object obj, byte b)`: Asigna un valor byte al campo para el objeto dado.
+-  `setChar(Object obj, char c)`: Asigna un valor char al campo para el objeto dado.
+-  `setDouble(Object obj, double d)`: Asigna un valor double al campo para el objeto dado.
+-  `setFloat(Object obj, float f)`: Asigna un valor float al campo para el objeto dado.
+-  `setInt(Object obj, int i)`: Asigna un valor int al campo para el objeto dado.
+-  `setLong(Object obj, long L)`: Asigna un valor long al campo para el objeto dado.
+-  `setShort(Object obj, short s)`: Asigna un valor short al campo para el objeto dado.
+-  `trySetAccessible()`: Intenta establecer la accesibilidad del campo a `true` sin lanzar excepciones de seguridad. Este método es específico de algunas implementaciones de Java y no es parte de la especificación estándar de Java.
+<p>Estos métodos permiten inspeccionar y manipular campos de clases en tiempo de ejecución, proporcionando flexibilidad para trabajar con la estructura de la clase.</p>
