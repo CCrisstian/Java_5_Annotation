@@ -103,3 +103,22 @@ Métodos proporcionados por la clase `Field`:
 -  `setShort(Object obj, short s)`: Asigna un valor short al campo para el objeto dado.
 -  `trySetAccessible()`: Intenta establecer la accesibilidad del campo a `true` sin lanzar excepciones de seguridad. Este método es específico de algunas implementaciones de Java y no es parte de la especificación estándar de Java.
 <p>Estos métodos permiten inspeccionar y manipular campos de clases en tiempo de ejecución, proporcionando flexibilidad para trabajar con la estructura de la clase.</p>
+<h2 align="center">'Method'</h2>
+<p>En Java, la clase <b>'Method'</b> pertenece al paquete java.lang.reflect y se utiliza para representar un método de una clase en tiempo de ejecución. Permite acceder y manipular información sobre los métodos de una clase, así como invocar esos métodos dinámicamente.</p>
+
+Métodos más comunes proporcionados por la clase `Method`:
+-  `getName()`: Devuelve el nombre del método.
+-  `getReturnType()`: Devuelve un objeto Class que representa el tipo de retorno del método.
+-  `getParameterTypes()`: Devuelve un array de objetos Class que representan los tipos de parámetros del método.
+-  `getModifiers()`: Devuelve un entero que representa los modificadores del método.
+-  `invoke(Object obj, Object... args)`: Invoca el método en el objeto proporcionado con los argumentos dados y devuelve el resultado.
+-  `isVarArgs()`: Devuelve true si el método utiliza la sintaxis de argumentos variables (varargs), false en caso contrario.
+-  `isBridge()`: Devuelve true si el método es un puente introducido por el compilador para admitir la interoperabilidad entre versiones genéricas y no genéricas.
+-  `isSynthetic()`: Devuelve true si el método es sintético, es decir, fue generado por el compilador y no aparece en el código fuente original.
+-  `getAnnotation(Class<T> annotationClass)`: Devuelve la anotación del tipo especificado presente en este método, o null si no está presente.
+-  `getDeclaredAnnotations()`: Devuelve un array de todas las anotaciones presentes en este método.
+-  `getExceptionTypes()`: Devuelve un array de objetos Class que representan los tipos de excepciones declaradas lanzadas por el método.
+-  `getGenericReturnType()`: Devuelve un objeto Type que representa el tipo de retorno del método, incluyendo información sobre genéricos si está presente.
+-  `getGenericParameterTypes()`: Devuelve un array de objetos Type que representan los tipos de parámetros del método, incluyendo información sobre genéricos si está presente.
+-  `toString()`: Devuelve una representación en cadena del método, que incluye su nombre, tipos de parámetros y tipo de retorno.
+<p>Estos métodos permiten inspeccionar y manipular métodos de una clase en tiempo de ejecución, lo que puede ser útil para implementar lógica dinámica y trabajar con métodos de manera más flexible.</p>
