@@ -81,6 +81,7 @@ Métodos proporcionados por la clase `Field`:
 -  `get()`: Devuelve el valor del campo para el objeto dado. Necesita recibir como argumento una instancia del objeto al que pertenece el campo.
 -  `set()`: Asigna un nuevo valor al campo para el objeto dado. Requiere dos argumentos: una instancia del objeto al que pertenece el campo y el nuevo valor a asignar.
 -  `getName()`: Devuelve el nombre del campo como una cadena de texto.
+-  `setAccessible()`: Se utiliza para cambiar la accesibilidad de un campo, permitiendo el acceso a miembros privados o protegidos que normalmente no serían accesibles desde fuera de su clase.
 -  `getType()`: Devuelve un objeto `Class` que representa el tipo de datos del campo.
 -  `getModifiers()`: Devuelve un entero que representa los modificadores del campo. Puede utilizarse junto con la clase `Modifier` para analizar los modificadores.
 -  `equals(Object obj)`: Compara el campo con otro objeto para verificar si son iguales.
@@ -108,7 +109,8 @@ Métodos proporcionados por la clase `Field`:
 
 Métodos más comunes proporcionados por la clase `Method`:
 -  `getName()`: Devuelve el nombre del método.
--  `getDeclaredMethods()`: devuelve un array de objetos Method que representan todos los métodos declarados en la clase o interfaz.
+-  `getDeclaredMethods()`: Devuelve un array de objetos Method que representan todos los métodos declarados en la clase o interfaz.
+-  `setAccessible()`: Se utiliza para cambiar la accesibilidad de un campo, permitiendo el acceso a miembros privados o protegidos que normalmente no serían accesibles desde fuera de su clase.
 -  `getReturnType()`: Devuelve un objeto `Class` que representa el tipo de retorno del método.
 -  `getParameterTypes()`: Devuelve un array de objetos `Class` que representan los tipos de parámetros del método.
 -  `getModifiers()`: Devuelve un entero que representa los modificadores del método.
